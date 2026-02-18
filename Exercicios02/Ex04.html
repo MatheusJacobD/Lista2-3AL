@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayajins</title>
+</head>
+<body>
+    <input type="text" id="idNome">Digite o nome do guerreiro<br>
+    <input type="text" id="idKi">Digite o ki do guerreiro<br>
+
+    <button onclick="medir()">Ver ki em cada forma</button>
+    
+</body>
+<script>
+    function medir(){
+        let nome = idNome.value;
+    let ki = Number(idKi.value);
+
+    alert(`O ki de ${nome} na forma Super Sayajin é ${ki*50}`);
+    alert(`O ki de ${nome} na forma Super Sayajin 2 é ${ki*100}`);
+    }
+    
+</script>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    <input type="text" id="idContinuada">Digite a nota da avaliação continuada<br>
+    <input type="text" id="idPesquisa">Digite a nota de PI<br>
+    <input type="text" id="idNome">Digite seu nome<br>
+
+    <button onclick="CalcularMedia()">Calcular media</button><br>
+    <p id="idMedia"></p>
+    
+</body>
+<script>
+    function CalcularMedia(){
+        let notaC = Number(idContinuada.value);
+        let notaP = Number(idPesquisa.value);
+        let nome = idNome.value;
+
+        let media = (0.4 * notaC) + (0.6 * notaP);
+
+        idMedia.innerHTML = `A média de ${nome} será de ${media}`;
+
+    }
+</script>
+</html>

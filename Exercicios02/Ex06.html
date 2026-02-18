@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <input type="text" id="idN1">Digite o primeiro número<br>
+    <input type="text" id="idN2">Digite o segundo número<br>
+
+    <button onclick="Somar()">soma</button>
+    <button onclick="Subtrair()">subtração</button><br>
+    <button onclick="Multiplicar()">multiplicação</button>
+    <button onclick="Dividir()">divisão</button><br>
+
+    <p id="idCalc"></p>
+    
+</body>
+<script>
+    function Somar(){
+        let n1 = Number(idN1.value);
+        let n2 = Number(idN2.value);
+        idCalc.innerHTML = n1 + n2;
+    }
+
+    function Subtrair(){
+        let n1 = Number(idN1.value);
+        let n2 = Number(idN2.value);
+        idCalc.innerHTML = n1 - n2;
+    }
+
+    function Multiplicar(){
+        let n1 = Number(idN1.value);
+        let n2 = Number(idN2.value);
+        idCalc.innerHTML = n1 * n2;
+    }
+
+    function Dividir(){
+        let n1 = Number(idN1.value);
+        let n2 = Number(idN2.value);
+        idCalc.innerHTML = n1 / n2;
+    }
+</script>
+</html>

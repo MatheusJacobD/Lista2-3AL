@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economia</title>
+</head>
+<body>
+    <input type="text" id="idValor">Digite o valor da passagem</input><br>
+    <input type="text" id="idViagens">Digite o número de viagens mensais</input><br>
+    <button onclick="economizar()">Ver Economia</button>
+</body>
+
+<script>
+    function economizar(){
+        let valor = Number(idValor.value);
+        let viagens = Number(idViagens.value);
+
+
+        alert(`Você economizará R$${(valor * viagens) - (valor / 2) * viagens} por mês`);
+    }
+</script>
+</html>

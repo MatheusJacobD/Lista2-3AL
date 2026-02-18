@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aposentadoria</title>
+</head>
+<body>
+    <input id="idIdade">Digite sua idade</input>
+
+    <br>
+
+    <button onclick="calcularHomem()">Homem</button>
+    <button onclick="calcularMulher()">Mulher</button>
+
+    
+</body>
+<script>
+    function calcularHomem(){
+        alert(`Faltam ${70 - Number(idIdade.value)} anos para você se aposentar`);
+    }
+
+    function calcularMulher(){
+        alert(`Faltam ${60 - Number(idIdade.value)} anos para você se aposentar`);
+    }
+</script>
+</html>

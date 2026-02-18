@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+</head>
+<body>
+    <input type="text" id="idDeposito">Digite o valor a ser depoistado<br>
+    <input type="text" id="idRetirada">Digite o valor a ser retirado<br>
+
+    <button onclick="Depositar()">Depositar</button>
+    <button onclick="Retirar()">Retirar</button>
+</body>
+<script>
+    let saldo = 0;
+
+    function Depositar(){
+        deposito = Number(idDeposito.value);
+        saldo += deposito;
+
+        alert(`Depósito de R$${deposito}! Saldo atual ${saldo}`);
+    }
+
+    function Retirar(){
+        retirada = Number(idRetirada.value);
+        saldo -= retirada;
+
+        alert(`Depósito de R$${retirada}! Saldo atual ${saldo}`);
+    }
+</script>
+</html>
