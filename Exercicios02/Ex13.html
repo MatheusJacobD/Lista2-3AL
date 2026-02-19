@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transporte</title>
+</head>
+<body>
+
+    Valor da passagem:<br>
+    <input type="text" id="idPassagem"><br>
+
+    Quantidade de viagens:<br>
+    <input type="text" id="idViagens"><br>
+
+    Distância em km:<br>
+    <input type="text" id="idKm"><br><br>
+
+    <button onclick="calcular()">Calcular VT</button>
+
+    <p id="resp"></p>
+
+</body>
+
+<script>
+    function calcular(){
+
+        passagem = Number(idPassagem.value);
+        viagens = Number(idViagens.value);
+        km = Number(idKm.value);
+
+        uber = viagens * 0.10;
+        bus = viagens * 0.90;
+
+        gastoBus = bus * passagem;
+        gastoUber = uber * (km * 0.75);
+
+        total = gastoBus + gastoUber;
+
+        resp.innerHTML = `Você vai gastar R$${total.toFixed(2)} por mês com transporte.`;
+    }
+</script>
+
+</html>

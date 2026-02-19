@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+</head>
+<body>
+
+    Digite um número:<br>
+    <input type="text" id="idNum"><br><br>
+
+    <button onclick="ver()">Ver Tabuada</button>
+
+    <p id="resp"></p>
+
+</body>
+
+<script>
+    function ver(){
+
+        num = Number(idNum.value);
+
+        resp.innerHTML = `
+        ${num} x 1 = ${num*1} <br>
+        ${num} x 2 = ${num*2} <br>
+        ${num} x 3 = ${num*3} <br>
+        ${num} x 4 = ${num*4} <br>
+        ${num} x 5 = ${num*5} <br>
+        ${num} x 6 = ${num*6} <br>
+        ${num} x 7 = ${num*7} <br>
+        ${num} x 8 = ${num*8} <br>
+        ${num} x 9 = ${num*9}
+        `;
+    }
+</script>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleição</title>
+</head>
+<body>
+
+    Votos Candidato A:<br>
+    <input type="text" id="idA"><br>
+
+    Votos Candidato B:<br>
+    <input type="text" id="idB"><br>
+
+    Votos Brancos:<br>
+    <input type="text" id="idBranco"><br>
+
+    Votos Nulos:<br>
+    <input type="text" id="idNulo"><br><br>
+
+    <button onclick="resultado()">Resultado da Eleição</button>
+
+    <p id="resp"></p>
+
+</body>
+
+<script>
+    function resultado(){
+
+        a = Number(idA.value);
+        b = Number(idB.value);
+        branco = Number(idBranco.value);
+        nulo = Number(idNulo.value);
+
+        invalidos = branco + nulo;
+        total = a + b + invalidos;
+
+        percA = (a/total)*100;
+        percB = (b/total)*100;
+        percInv = (invalidos/total)*100;
+
+        resp.innerHTML = `
+        Total de votos: ${total}<br><br>
+        Candidato A: ${percA.toFixed(0)}% (${a} votos)<br>
+        Candidato B: ${percB.toFixed(0)}% (${b} votos)<br>
+        Inválidos: ${percInv.toFixed(0)}% (${invalidos} votos)
+        `;
+    }
+</script>
+
+</html>
