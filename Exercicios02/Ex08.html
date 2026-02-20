@@ -6,8 +6,7 @@
     <title>Banco</title>
 </head>
 <body>
-    <input type="text" id="idDeposito">Digite o valor a ser depoistado<br>
-    <input type="text" id="idRetirada">Digite o valor a ser retirado<br>
+    <input type="text" id="idTransação">Digite o valor da transação<br>
 
     <button onclick="Depositar()">Depositar</button>
     <button onclick="Retirar()">Retirar</button>
@@ -16,14 +15,14 @@
     let saldo = 0;
 
     function Depositar(){
-        deposito = Number(idDeposito.value);
+        deposito = Number(idTransação.value);
         saldo += deposito;
 
         alert(`Depósito de R$${deposito}! Saldo atual ${saldo}`);
     }
 
     function Retirar(){
-        retirada = Number(idRetirada.value);
+        retirada = Number(idTransação.value);
         saldo -= retirada;
 
         alert(`Depósito de R$${retirada}! Saldo atual ${saldo}`);
